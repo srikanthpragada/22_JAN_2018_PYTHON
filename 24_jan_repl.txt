@@ -1,0 +1,131 @@
+D:\python3>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> s = "Python"
+>>> s[:3]
+'Pyt'
+>>> s[3:]
+'hon'
+>>> s[-2:]
+'on'
+>>> s[-5:-2]
+'yth'
+>>> s2 = s
+>>> id(s)
+31613632
+>>> id(s2)
+31613632
+>>> s3 = s[:]
+>>> id(s3)
+31613632
+>>> s3 = s[1:6]
+>>> id(s3)
+32839168
+>>> s = "Python 3.0"
+>>> s.partition(" ")
+('Python', ' ', '3.0')
+>>> s = "Python 3.0 is latest version"
+>>> s.partition(" ")
+('Python', ' ', '3.0 is latest version')
+>>> s.split(" ")
+['Python', '3.0', 'is', 'latest', 'version']
+>>> s.find("3.0")
+7
+>>> s.find("2.0")
+-1
+>>> s.index("3.0")
+7
+>>> s.index("2.0")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: substring not found
+>>> s =  "Srikanth Technologies"
+>>> for i in range(0, len(s)) :
+... print(s[i])
+  File "<stdin>", line 2
+    print(s[i])
+        ^
+IndentationError: expected an indented block
+>>> for i in range(0, len(s)) :
+...     print(s[i])
+... ;
+  File "<stdin>", line 3
+    ;
+    ^
+SyntaxError: invalid syntax
+>>> "{} {}".format(1,2)
+'1 2'
+>>> "{} {}".format("abc",2000)
+'abc 2000'
+>>> "{name} {price}".format("abc",2000)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'name'
+>>> "{name} {price}".format(name="abc",price=2000)
+'abc 2000'
+>>> "{name} {price}".format(price=2000,name="abc")
+'abc 2000'
+>>> "{} {} {}".format("abc",2000,3000)
+'abc 2000 3000'
+>>> "{0} {1} {2}".format("abc",2000,3000)
+'abc 2000 3000'
+>>> "{0} {1} {0}".format("abc",2000,3000)
+'abc 2000 abc'
+>>> "{0} {1} {1}".format("abc",2000,3000)
+'abc 2000 2000'
+>>> "{1} {0} {2}".format("abc",2000,3000)
+'2000 abc 3000'
+>>> for i in range(0, len(s)) :    print(s[i])
+...
+S
+r
+i
+k
+a
+n
+t
+h
+
+T
+e
+c
+h
+n
+o
+l
+o
+g
+i
+e
+s
+>>> for i in range(0, len(s)) :    print(s[i], end=' ')
+...
+S r i k a n t h   T e c h n o l o g i e s >>>
+>>> for ch in s:
+...     print (ch)
+...
+S
+r
+i
+k
+a
+n
+t
+h
+
+T
+e
+c
+h
+n
+o
+l
+o
+g
+i
+e
+s
+>>> for ch in s:
+...     print (ch, end=' ')
+...
+S r i k a n t h   T e c h n o l o g i e s >>>

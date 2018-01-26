@@ -1,0 +1,111 @@
+D:\python3>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> s = "Python"
+>>> r = s[::-1]
+>>> r
+'nohtyP'
+>>> for c in s[::-1]:
+...     print(c)
+...
+n
+o
+h
+t
+y
+P
+>>> v=10
+>>> v++
+  File "<stdin>", line 1
+    v++
+      ^
+SyntaxError: invalid syntax
+>>> v+=1
+>>> v
+11
+>>> langs = ["Python","Java","C#","Javascript"]
+>>> favlangs = []
+>>> len(langs)
+4
+>>> for l in langs:
+...     print(l)
+...
+Python
+Java
+C#
+Javascript
+>>> langs[1] = "Java 9"
+>>> langs
+['Python', 'Java 9', 'C#', 'Javascript']
+>>> langs[6] = "Java 9"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+>>> langs.append("TypeScript")
+>>> langs
+['Python', 'Java 9', 'C#', 'Javascript', 'TypeScript']
+>>> langs[3] = "JavaScript"
+>>> langs
+['Python', 'Java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> langs.insert(0,"c")
+>>> langs
+['c', 'Python', 'Java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> del langs[0]
+>>> langs
+['Python', 'Java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> langs.append(10)
+>>> langs
+['Python', 'Java 9', 'C#', 'JavaScript', 'TypeScript', 10]
+>>> type(langs[0])
+<class 'str'>
+>>> langs[-1]
+10
+>>> type(langs[5])
+<class 'int'>
+>>> langs[-1:-3]
+[]
+>>> langs[-3]
+'JavaScript'
+>>> langs[-3:-1]
+['JavaScript', 'TypeScript']
+>>> langs[-1:-3:-1]
+[10, 'TypeScript']
+>>> del langs[-1]
+>>> langs
+['Python', 'Java 9', 'C#', 'JavaScript', 'TypeScript']
+>>> lang = langs.pop()
+>>> lang
+'TypeScript'
+>>> langs
+['Python', 'Java 9', 'C#', 'JavaScript']
+>>> langs.sort()
+>>> langs
+['C#', 'Java 9', 'JavaScript', 'Python']
+>>> evens = [20,40,60]
+>>> odds = [21,45,67]
+>>> nums = [evens,odds]
+>>> nums
+[[20, 40, 60], [21, 45, 67]]
+>>> nums = evens + odds
+>>> nums
+[20, 40, 60, 21, 45, 67]
+>>> fl = langs
+>>> fl
+['C#', 'Java 9', 'JavaScript', 'Python']
+>>> fl.append("VB")
+>>> fl
+['C#', 'Java 9', 'JavaScript', 'Python', 'VB']
+>>> langs
+['C#', 'Java 9', 'JavaScript', 'Python', 'VB']
+>>> max(langs)
+'VB'
+>>> min(langs)
+'C#'
+>>> nums = [10,1,3,20]
+>>> sorted(nums)
+[1, 3, 10, 20]
+>>> nums
+[10, 1, 3, 20]
+>>> "abc xyz".split()
+['abc', 'xyz']
+>>>
