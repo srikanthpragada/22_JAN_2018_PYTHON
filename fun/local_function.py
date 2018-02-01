@@ -1,6 +1,5 @@
 gv = "global"
 
-
 def fun():
     print("I am in fun()")
     ev = "enclosing"
