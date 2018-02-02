@@ -1,7 +1,7 @@
 
-from . import my_numbers
+import my_numbers
 
-print ( my_numbers.isprime(192922))
+print ( my_numbers.isprime(191))
 
 
 

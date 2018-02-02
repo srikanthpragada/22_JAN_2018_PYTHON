@@ -1,11 +1,16 @@
-
 # program to print whether a number is prime or not
 # it takes input from command line arguments
 
 import sys
 import my_numbers
 
-if  my_numbers.isprime( int(sys.argv[1])):
-    print("Yes. Prime Number!")
-else:
-    print("No. Not a prime number")
+if len(sys.argv) < 2:
+   print('Sorry! Missing number');
+   sys.exit(0)  # exit program
+
+for i in range(1, len(sys.argv)):
+    num  = int(sys.argv[i])
+    if  my_numbers.isprime(num):
+       print("{} is prime number!".format(num))
+    else:
+       print("{} is not a prime number".format(num))
