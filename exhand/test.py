@@ -1,12 +1,20 @@
 
-a = 10
-b = 0
 
-st = "Abc"
-print(st.remove('abc'))
+st = input("Enter a number :")
+names = ['a','b','c']
 
-c = a / b
+try:
+  v = intt(st)
+  print("Value entered is ", v)
+  print(names[v])
+except(ValueError):
+  print("Sorry! Invalid number!")
+else:
+  print("Success")
+finally:
+  print("Finally")
 
+print("The End!")
 
 
 
