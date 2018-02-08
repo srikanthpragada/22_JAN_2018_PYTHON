@@ -5,6 +5,10 @@ class Time:
         self.m = m
         self.s = s
 
+    @classmethod
+    def create(cls,h,m,s):
+        return cls(h,m,s)
+
     @property   #getter
     def seconds(self):
         return self.total_seconds()
@@ -32,10 +36,22 @@ class Time:
         return  self.total_seconds() > other.total_seconds()
 
     def __add__(self, other):
-        total = self.total_seconds() + other
+        if isinstance(other,Time):
+            total = self.total_seconds() + other.total_seconds()
+        elif isinstance(other,int):
+            total = self.total_seconds() + other
+        else:
+            raise ValueError('Invalid Operand!')
+
+        total %= (3600 * 24)
+
         t = Time()
         t.time_from_seconds(total)
         return t
+
+
+t = Time.create(10,20,30)
+print(t)
 
 
 t1 = Time(10, 2, 4)
@@ -43,7 +59,10 @@ t2 = Time(10,2,3)
 secs = t1.total_seconds()
 print(secs)
 t1.time_from_seconds(secs)
-print(t1 + 5000)
+# print(t1 + 5000)
+print(t1 + t2)
+
+
 
 
 
