@@ -1,20 +1,26 @@
-
-
-class Base1:
+class Base:
     def print(self):
-        print("In Base1")
+        print("In Base")
 
-class Base2:
+
+class Base1(Base):
+    pass
+    # def print(self):
+    #     print("In Base1")
+
+
+class Base2(Base):
     def print(self):
         print("In Base2")
 
-class Derived(Base2,Base1):
-    def print(self):
-        super().print()
-        print("In Derived")
+
+class Derived(Base1, Base2):
+    pass
+    # def print(self):
+    #     super().print()
+    #     print("In Derived")
 
 
 obj = Derived()
 obj.print()
 print(Derived.__mro__)
-
